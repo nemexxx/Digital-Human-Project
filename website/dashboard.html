@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+    <script defer src="chart.js"></script> <!-- Link to your custom JS file -->
+</head>
+</head>
+<body>
+
+<!-- Navigation Bar with Logo -->
+<nav>
+    <div class="logo">
+        <img src="Echo.png" alt="Logo">
+    </div>
+    <ul>
+        <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="instagram.html"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="threads.html"><i class="fas fa-comments"></i> Threads</a></li>
+        <li><a href="chrome.html"><i class="fas fa-globe"></i> Chrome</a></li>
+        <li><a href="youtube.html"><i class="fab fa-youtube"></i> YouTube</a></li>
+    </ul>
+</nav>
+
+<div style="margin: 40px">
+</div>
+
+<section id="dashboard" class="content" style="padding-top: 10px;"> <!-- Reduzierter oberer Abstand -->
+    <h1 style="display: flex; justify-content: center; align-items: center; margin-top: 5px;">
+        <img src="Echo Icon.png" alt="Echo Logo" class="icon" style="margin-right: 10px;"> 
+        <span>Your Dashboard</span>
+    </h1>
+
+    <div class="button-container" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <a href="#instagram" class="btn">Go to Instagram</a>
+        <a href="#threads" class="btn">Go to Threads</a>
+        <a href="#chrome" class="btn">Go to Chrome</a>
+        <a href="#youtube" class="btn">Go to YouTube</a>
+    </div>
+</section>
+
+<!-- CHARTS -->
+<section class="charts-wrapper">
+    <div class="chart-container">
+        <h2><i class="fab fa-instagram"></i> Instagram</h2>
+        <h3>Most Liked Accounts</h3>
+        <canvas id="instagramChart"></canvas>
+    </div> 
+    <div class="chart-container">
+        <h2><i class="fas fa-comments"></i> Threads</h2>
+        <h3>Most Liked Accounts</h3>
+        <canvas id="threadsChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2><i class="fas fa-globe"></i> Chrome</h2>
+        <h3>Most Visited Sites</h3>
+        <canvas id="chromeChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2><i class="fab fa-youtube"></i> YouTube</h2>
+        <h3>Most Watched Channels</h3>
+        <canvas id="youtubeChart"></canvas>
+    </div>
+</section>
+
+
+<section id="dashboard" class="content">
+        <div class="table-container">
+            <h2 id="instagram"><i class="fab fa-instagram"></i> Instagram</h2>
+            <h3>Your Top 5 most liked Accounts </h3> 
+            <table>
+                <thead>
+                    <tr><th>Account</th><th>Likes</th></tr>
+                </thead>
+                <tbody>
+                    <!-- Instagram summary data here -->
+<tr><td>zdfheute</td><td>161</td></tr>
+<tr><td>tagesschau</td><td>135</td></tr>
+<tr><td>yvonnepferrer</td><td>132</td></tr>
+<tr><td>louisaschneider.info</td><td>129</td></tr>
+<tr><td>grad.jetzt</td><td>113</td></tr>
+<!-- End of Instagram summary data here -->
+                </tbody>
+            </table>
+        </div>
+</section>
+
+        <section id="dashboard" class="content">
+        <div class="table-container">
+            <h2 id="threads"><i class="fas fa-comments"></i> Threads</h2>
+            <h3>Your Top 5 most liked Accounts </h3> 
+            <table>
+                <thead>
+                    <tr><th>Account</th><th>Likes</th></tr>
+                </thead>
+                <tbody>
+                    <!-- Threads summary data here -->
+<tr><td>piimglueck</td><td>9</td></tr>
+<tr><td>sakarilacross</td><td>5</td></tr>
+<tr><td>natalie_jayne_art</td><td>4</td></tr>
+<tr><td>withcaesare</td><td>4</td></tr>
+<tr><td>cristian_712</td><td>4</td></tr>
+<!-- End of Threads summary data here -->
+                </tbody>
+            </table>
+        </div>
+</section>
+
+<section id="dashboard" class="content">
+    <div class="table-container">
+        <h2 id="chrome"><i class="fas fa-globe"></i> Chrome</h2>
+        <h3> Top 5 Visited Domains</h3>
+        <table>
+            <thead>
+                <tr><th>Page Title</th><th>Visits</th></tr>
+            </thead>
+            <tbody>
+                <!-- Chrome Top 5 Visited Domains Data -->
+<tr><td>docs.google.com</td><td>5261</td></tr>
+<tr><td>www.linkedin.com</td><td>1781</td></tr>
+<tr><td>www.ecosia.org</td><td>756</td></tr>
+<tr><td>manage.wix.com</td><td>729</td></tr>
+<tr><td>www.google.de</td><td>619</td></tr>
+<!-- End of Chrome Top 5 Visited Domains Data -->
+            </tbody>
+        </table>
+
+        <h3> Top 5 Visited URLs</h3>
+        <table>
+            <thead>
+                <tr><th>Title of URL</th><th>Visits</th></tr>
+            </thead>
+            <tbody>
+                <!-- Chrome Top 5 Frequent Titles Data -->
+<tr><td>3 _ Blockchain Final Project NB, JH, EJ - Google Docs</td><td>698</td></tr>
+<tr><td>Finanzen 2025 - Google Sheets</td><td>659</td></tr>
+<tr><td>Ford_Junker - Google Docs</td><td>530</td></tr>
+<tr><td>LinkedIn</td><td>402</td></tr>
+<tr><td>DeepL Übersetzer: Der präziseste Übersetzer der Welt</td><td>317</td></tr>
+<!-- End of Chrome Top 5 Frequent Titles Data -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="dashboard" class="content">
+    <div class="table-container">
+        <h2 id="youtube"><i class="fab fa-youtube"></i> YouTube</h2>
+        <h3> Top 5 Watched Channels</h3>
+        <table>
+            <thead>
+                <tr><th>Channel</th><th>Counts</th></tr>
+            </thead>
+            <tbody>
+                <!-- Top 5 watched youtube channels -->
+<tr><td>Paluten</td><td>358</td></tr>
+<tr><td>Unknown Channel</td><td>323</td></tr>
+<tr><td>GermanLetsPlay</td><td>202</td></tr>
+<tr><td>Mady Morrison</td><td>89</td></tr>
+<tr><td>Mathe by Daniel Jung</td><td>88</td></tr>
+<!-- End of Top 5 watched youtube channels -->
+            </tbody>
+        </table>
+
+        <h3> Yearly Watch Trends</h3>
+        <table>
+            <thead>
+                <tr><th>Year</th><th>Amount</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Yearly Watch Trends -->
+<tr><td>2017</td><td>1282</td></tr>
+<tr><td>2018</td><td>183</td></tr>
+<tr><td>2019</td><td>340</td></tr>
+<tr><td>2020</td><td>562</td></tr>
+<tr><td>2021</td><td>912</td></tr>
+<tr><td>2022</td><td>613</td></tr>
+<tr><td>2023</td><td>1119</td></tr>
+<tr><td>2024</td><td>847</td></tr>
+<tr><td>2025</td><td>69</td></tr>
+<!-- End of YouTube Yearly Watch Trends -->
+            </tbody>
+        </table>
+
+        <h3> Yearly Search Trends</h3>
+        <table>
+            <thead>
+                <tr><th>Year</th><th>Amount</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Yearly Search Trends -->
+<tr><td>2017</td><td>6</td></tr>
+<!-- End of YouTube Yearly Search Trends -->
+            </tbody>
+        </table>
+
+    </div>
+
+</section>
+
