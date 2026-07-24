@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+    <script defer src="chart.js"></script> <!-- Link to your custom JS file -->
+</head>
+</head>
+<body>
+
+<!-- Navigation Bar with Logo -->
+<nav>
+    <div class="logo">
+        <img src="Echo.png" alt="Logo">
+    </div>
+    <ul>
+        <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="instagram.html"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="threads.html"><i class="fas fa-comments"></i> Threads</a></li>
+        <li><a href="chrome.html"><i class="fas fa-globe"></i> Chrome</a></li>
+        <li><a href="youtube.html"><i class="fab fa-youtube"></i> YouTube</a></li>
+    </ul>
+</nav>
+
+<!-- Chrome History Page -->
+<section id="chrome" class="content">
+    <h1><i class="fas fa-globe"></i> Your Chrome History Analysis</h1>
+    <p>
+        This analysis gives you insights into your browsing habits by identifying your most visited websites,
+        the most frequently seen page titles, and other interesting metrics like peak browsing.
+    </p>
+
+    <!-- Quick Links -->
+    <p class="inline-links">
+        <a href="#visited-domains-table" class="btn">Go to Most Visited Domains</a>
+        <a href="#frequent-titles-table" class="btn">Go to Most Frequent Titles</a>
+    </p>
+
+
+
+    <!-- Peak Browsing Hour -->
+    <div class="table-container">
+        <h3 id="peak-hour"><i class="fas fa-clock"></i> Peak Browsing Hour</h3>
+        <table>
+            <thead>
+                <tr><th></th><th>Time</th></tr>
+            </thead>
+            <tbody>
+                <!-- Chrome Peak Browsing Hour -->
+<!-- End of Chrome Peak Browsing Hour -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Most Visited Domains Table -->
+    <div class="table-container">
+        <h3 id="visited-domains-table"><i class="fas fa-cogs"></i> Most Visited Domains</h3>
+        <table>
+            <thead>
+                <tr><th>Domain</th><th>Visits</th></tr>
+            </thead>
+            <tbody>
+                <!-- Chrome Most Visited Domains Data -->
+<!-- End of Chrome Most Visited Domains Data -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Most Frequent Titles Table -->
+    <div class="table-container">
+        <h3 id="frequent-titles-table"><i class="fas fa-file-alt"></i> Most Frequent Titles</h3>
+        <table>
+            <thead>
+                <tr><th>Page Title</th><th>Visists</th></tr>
+            </thead>
+            <tbody>
+                <!-- Chrome Most Frequent Titles Data -->
+<!-- End of Chrome Most Frequent Titles Data -->
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+</body>
+</html>

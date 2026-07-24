@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+    <script defer src="chart.js"></script> <!-- Link to your custom JS file -->
+</head>
+</head>
+<body>
+
+<!-- Navigation Bar with Logo -->
+<nav>
+    <div class="logo">
+        <img src="Echo.png" alt="Logo">
+    </div>
+    <ul>
+        <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="instagram.html"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="threads.html"><i class="fas fa-comments"></i> Threads</a></li>
+        <li><a href="chrome.html"><i class="fas fa-globe"></i> Chrome</a></li>
+        <li><a href="youtube.html"><i class="fab fa-youtube"></i> YouTube</a></li>
+    </ul>
+</nav>
+
+<section class="content">
+    <h1><i class="fab fa-youtube"></i> YouTube Analysis</h1>
+    <p>Understand your YouTube watch behavior with insights on your top channels, peak watch hours, and trends over time.</p>
+    
+    <div class="button-container">
+        <a href="#youtube-watch" class="btn">Watch Analysis</a>
+        <a href="#youtube-search" class="btn">Search Analysis</a>
+    </div>
+</section>
+
+<!-- YouTube Watch Analysis Page -->
+<section id="youtube-watch" class="content">
+    <h1><i class="fab fa-youtube"></i> YouTube Watch Analysis</h1>
+
+    <!-- Quick Links as Compact Buttons -->
+    <div class="button-container">
+        <a href="#top-watched-channels" class="btn">Top 5 Channels</a>
+        <a href="#peak-watch-hour" class="btn">Peak Watch Hour</a>
+        <a href="#yearly-watch-trends" class="btn">Yearly Trends</a>
+        <a href="#monthly-watch-trends" class="btn">Monthly Trends</a>
+        <a href="#watched-titles-table" class="btn">Watched Titles</a>
+        <a href="#watched-channels-table" class="btn">Watched Channels</a>
+    </div>
+
+    <!-- Top 5 Watched YouTube Channels -->
+    <div class="table-container">
+        <h3 id="top-watched-channels"><i class="fas fa-tv"></i> Top 5 Watched YouTube Channels</h3>
+        <p>These are the top 5 YouTube channels you've spent the most time watching.</p>
+        <table>
+            <thead>
+                <tr><th>Channel</th><th>Amount of Videos watched</th></tr>
+            </thead>
+            <tbody>
+                <!-- Top 5 watched youtube channels -->
+<!-- End of Top 5 watched youtube channels -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Peak Watch Hour -->
+    <div class="table-container">
+        <h3 id="peak-watch-hour"><i class="fas fa-clock"></i> Peak Watch Hour</h3>
+        <p>Understand the hour you typically watch the most YouTube videos.</p>
+        <table>
+            <thead>
+                <tr><th></th><th>Time</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Peak Watch Hour -->
+<!-- End of YouTube Peak Watch Hour -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Yearly Watch Trends -->
+    <div class="table-container">
+        <h3 id="yearly-watch-trends"><i class="fas fa-calendar-alt"></i> Yearly Watch Trends</h3>
+        <p>Discover how your watch activity varies across different years.</p>
+        <table>
+            <thead>
+                <tr><th>Year</th><th>Amount of Videos watched</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Yearly Watch Trends -->
+<!-- End of YouTube Yearly Watch Trends -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Monthly Watch Trends -->
+    <div class="table-container">
+        <h3 id="monthly-watch-trends"><i class="fas fa-calendar"></i> Monthly Watch Trends</h3>
+        <p>Analyze how your YouTube watch time varies from month to month.</p>
+        <table>
+            <thead>
+                <tr><th>Month</th><th>Amount of Videos watched</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Monthly Watch Trends -->
+<!-- End of YouTube Monthly Watch Trends -->
+            </tbody>
+        </table>
+    </div>
+
+<!-- Watched YouTube Titles -->
+<div class="table-container">
+    <h3 id="watched-titles-table"><i class="fas fa-film"></i> Watched YouTube Titles</h3>
+    <p>See which YouTube videos have caught your attention the most.</p>
+    <table>
+        <thead>
+            <tr><th>Title</th><th>How often you watched it</th></tr>
+        </thead>
+        <tbody>
+            <!-- Watched youtube titles -->
+<!-- End of Watched youtube titles -->
+        </tbody>
+    </table>
+</div>
+
+    <!-- Watched YouTube Channels -->
+    <div class="table-container">
+        <h3 id="watched-channels-table"><i class="fas fa-tv"></i> Watched YouTube Channels</h3>
+        <p>This table shows a broader list of the YouTube channels you have watched.</p>
+        <table>
+            <thead>
+                <tr><th>Channel</th><th>Amount of Videos watched</th></tr>
+            </thead>
+            <tbody>
+                <!-- Watched youtube channels -->
+<!-- End of Watched youtube channels -->
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+<!-- YouTube Search Analysis Page -->
+<section id="youtube-search" class="content">
+    <h1><i class="fab fa-youtube"></i> YouTube Search Analysis</h1>
+
+    <!-- Quick Links -->
+    <p class="inline-links">
+        <a href="#peak-search-hour" class="btn">Go to Peak Search Hour</a>
+        <a href="#yearly-search-trends" class="btn">Go to Yearly Search Trends</a>
+        <a href="#monthly-search-trends" class="btn">Go to Monthly Search Trends</a>
+        <a href="#search-keywords-table" class="btn">Go to Most Searched Keywords</a>
+    </p>
+
+    <!-- Peak Search Hour -->
+    <div class="table-container">
+        <h3 id="peak-search-hour"><i class="fas fa-clock"></i> Peak Search Hour</h3>
+        <p>Discover the peak hour during which you performed the most searches on YouTube.</p>
+        <table>
+            <thead>
+                <tr><th></th><th>Time</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Peak Search Hour -->
+<!-- End of YouTube Peak Search Hour -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Yearly Search Trends -->
+    <div class="table-container">
+        <h3 id="yearly-search-trends"><i class="fas fa-calendar-alt"></i> Yearly Search Trends</h3>
+        <p>See how your search activity trends throughout the year, helping you identify patterns in your interests.</p>
+        <table>
+            <thead>
+                <tr><th>Year</th><th>Amount of Search Requests</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Yearly Search Trends -->
+<!-- End of YouTube Yearly Search Trends -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Monthly Search Trends -->
+    <div class="table-container">
+        <h3 id="monthly-search-trends"><i class="fas fa-calendar"></i> Monthly Search Trends</h3>
+        <p>Understand your search behavior month by month and spot the months with the highest activity.</p>
+        <table>
+            <thead>
+                <tr><th>Month</th><th>Amount of Search Requests</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Monthly Search Trends -->
+<!-- End of YouTube Monthly Search Trends -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Most Searched Keywords -->
+    <div class="table-container">
+        <h3 id="search-keywords-table"><i class="fas fa-search"></i> Most Searched Keywords</h3>
+        <p>Discover the top keywords you searched for on YouTube during the analyzed period.</p>
+        <table>
+            <thead>
+                <tr><th>Keyword</th><th>Amount</th></tr>
+            </thead>
+            <tbody>
+                <!-- YouTube Search Data -->
+<!-- End of YouTube Search Data -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</body>
+</html>

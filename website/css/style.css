@@ -1,0 +1,274 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to right, #6A0DAD, #0012A8, #0089FF);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    text-align: left; /* Standardtext linksbündig */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.logo img {
+    height: 40px; /* Adjust the size as needed */
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4A90E2;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Linksbündiger Text im Content */
+}
+
+/* Headings */
+h1 {
+    display: flex;
+    align-items: center;
+    font-size: 32px; /* Größere Überschriften */
+    margin-bottom: 15px;
+    text-align: left; /* Linksbündige Überschriften */
+}
+
+h1 .icon {
+    height: 50px; /* Größe des Icons anpassen */
+    width: 50px;
+    margin-right: 10px; /* Abstand zwischen Icon und Text */
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center; /* Zentrierte Überschriften in Charts */
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    background: linear-gradient(to right, #6A0DAD, #0012A8, #0089FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center; /* Zentrierte Unterüberschriften in Charts */
+}
+
+/* Sections */
+section.section {
+    margin-bottom: 20px;
+    text-align: left; /* Linksbündiger Text in Sections */
+}
+
+section.section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #6A0DAD, #0012A8, #0089FF);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: linear-gradient(to right, #6A0DAD, #0012A8, #0089FF);
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+table tr:hover td {
+    background-color: #e2e2e2;
+}
+
+/* Fix Second Column Alignment */
+table td:nth-child(2) {
+    text-align: center;
+}
+
+/* Icons */
+i {
+    margin-right: 8px;
+    color: transparent;
+    background: linear-gradient(to right, #6A0DAD, #0012A8, #0089FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Table Container */
+.table-container {
+    margin-top: 20px;
+}
+
+.table-container h3 {
+    font-size: 22px;
+    color: #4A90E2;
+    margin-bottom: 15px;
+}
+
+/* Inline Links */
+.inline-links a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, #6A0DAD, #0012A8, #0089FF);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #5A009E, #000F8A, #0078D4);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Container für die Diagramme */
+.chart-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center; /* Zentrierte Inhalte in Charts */
+}
+
+/* Stile für das Canvas-Element */
+canvas {
+    width: 100% !important;
+    height: 400px !important;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS-Anpassungen für die Charts */
+
+/* Container für alle Charts */
+.charts-wrapper {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; /* Charts zentrieren */
+    gap: 30px; /* Gleichmäßiger Abstand */
+    padding: 20px;
+    max-width: 1500px; /* Maximale Breite begrenzen */
+    margin: -15px 0; /* Reduzierter vertikaler Abstand zur umgebenden Section */
+    padding: 20px; /* Weniger Innenabstand */
+}
+
+/* Einzelne Chart-Box */
+.chart-container {
+    flex: 1 1 300px; /* Flexibles Wachstum (mind. 300px) */
+    min-width: 300px; /* Absolute Mindestbreite */
+    max-width: 400px; /* Maximale Breite */
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center; /* Zentrierte Inhalte in Charts */
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Canvas-Anpassungen */
+canvas {
+    width: 100% !important;
+    height: auto !important; /* Höhe automatisch anpassen */
+    aspect-ratio: 1; /* Immer quadratisches Format */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .charts-wrapper {
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .chart-container {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}

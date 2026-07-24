@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+    <script defer src="chart.js"></script> <!-- Link to your custom JS file -->
+</head>
+</head>
+<body>
+
+<!-- Navigation Bar with Logo -->
+<nav>
+    <div class="logo">
+        <img src="Echo.png" alt="Logo">
+    </div>
+    <ul>
+        <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="instagram.html"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="threads.html"><i class="fas fa-comments"></i> Threads</a></li>
+        <li><a href="chrome.html"><i class="fas fa-globe"></i> Chrome</a></li>
+        <li><a href="youtube.html"><i class="fab fa-youtube"></i> YouTube</a></li>
+    </ul>
+</nav>
+
+
+<!-- Instagram Page -->
+<section id="instagram" class="content">
+    <h1><i class="fab fa-instagram"></i> Your Instagram Analysis</h1>
+    <p>This analysis gives you insights into your instagram habits by identifying the accounts you have liked in the past and other interesting metrics such as which advertisers have access to your data.</p>
+    <p class="inline-links">
+        <a href="#liked-accounts-table" class="btn">Go to Your liked Accounts</a>
+        <a href="#advertiser-table" class="btn">Go to Advertiser Table</a>
+    </p>
+    <div class="table-container">
+        <h3 id="liked-accounts-table"><i class="fas fa-heart"></i> Your liked Accounts</h3>
+        <table>
+            <thead>
+                <tr><th>Account</th><th>Likes</th></tr>
+            </thead>
+            <tbody>
+                <!-- Instagram Likes Data -->
+<!-- End of Instagram Likes Data -->
+            </tbody>
+        </table>
+    </div>
+
+    
+
+   <!-- Advertiser Table -->
+<h2 id="advertiser-table">Advertiser Information</h2>
+<div class="table-container">
+    <h3><i class="fas fa-bullhorn"></i> Advertisers</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Advertiser</th>
+            </tr>
+        </thead>
+        <tbody id="advertiser-info">
+                <!-- Advertisers using Instagram data here -->
+<!-- End of Advertisers using Instagram data here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</body>
+</html>

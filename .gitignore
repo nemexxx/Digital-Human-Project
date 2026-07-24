@@ -1,0 +1,20 @@
+# --- Personal export data (NEVER commit this) ---
+# Your Instagram / Threads / Chrome / YouTube exports go here and stay local.
+/data/*
+!/data/README.md
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
