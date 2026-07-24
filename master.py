@@ -8,21 +8,28 @@ from data_analysis.youtube_history import run_youtube_search_analysis, run_youtu
 
 def update_html(filename, start_marker, end_marker, new_data):
     """ Updates a specific section in an HTML file while keeping the structure intact. """
-    with open(filename, "r") as file:
+    with open(filename, "r", encoding="utf-8") as file:
         html_content = file.read()
 
-    if start_marker not in html_content or end_marker not in html_content:
-        raise ValueError(f"Markers '{start_marker}' and/or '{end_marker}' are missing in {filename}!")
-
-    # Find the content between the markers
     start_index = html_content.find(start_marker)
-    end_index = html_content.find(end_marker) + len(end_marker)
-    
-    # Remove the old data and insert the new data
-    old_data = html_content[start_index:end_index]
-    updated_content = html_content.replace(old_data, f"{start_marker}\n{new_data}\n{end_marker}")
+    if start_index == -1:
+        raise ValueError(f"Marker '{start_marker}' is missing in {filename}!")
 
-    with open(filename, "w") as file:
+    # Look for the end marker *after* the start marker, so we always replace the
+    # matching block even when a file contains several similar sections.
+    end_index = html_content.find(end_marker, start_index)
+    if end_index == -1:
+        raise ValueError(f"Marker '{end_marker}' is missing in {filename}!")
+    end_index += len(end_marker)
+
+    # Splice the new data in place of the old block
+    updated_content = (
+        html_content[:start_index]
+        + f"{start_marker}\n{new_data}\n{end_marker}"
+        + html_content[end_index:]
+    )
+
+    with open(filename, "w", encoding="utf-8") as file:
         file.write(updated_content)
 
 def main():

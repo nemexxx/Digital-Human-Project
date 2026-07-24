@@ -5,9 +5,16 @@
 
 import json
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timezone
+from urllib.parse import urlparse
 
 from data_analysis.config import data_path
+
+
+def _hour_from_usec(time_usec):
+    """Convert a microsecond timestamp to its UTC hour."""
+    return datetime.fromtimestamp(time_usec / 1_000_000, tz=timezone.utc).hour
+
 
 def run_chrome_history_analysis():
     # Load Chrome history data from the JSON file
@@ -20,8 +27,7 @@ def run_chrome_history_analysis():
     # Initialize counters for URLs, Titles, and visit times
     url_counter = Counter()
     title_counter = Counter()
-    visit_times = []    
-    domain_hours_counter = {}  # Dictionary to store hours for each domain
+    visit_times = []
 
     # Loop through each visit entry in the history
     for visit in visits:
@@ -33,15 +39,6 @@ def run_chrome_history_analysis():
             # Count visits by URL and Title
             if url:
                 url_counter[url] += 1
-                domain = url.split("/")[2]  # Extract domain from URL (e.g., "instagram.com")
-                
-                # Initialize the domain hour counter if it doesn't exist
-                if domain not in domain_hours_counter:
-                    domain_hours_counter[domain] = Counter()
-                
-                # Collect visit times for peak hour analysis
-                hour = datetime.utcfromtimestamp(time_usec / 1_000_000).hour  # Convert to hour (24-hour format)
-                domain_hours_counter[domain][hour] += 1
 
             if title:
                 title_counter[title] += 1
@@ -52,9 +49,11 @@ def run_chrome_history_analysis():
     # Most Visited Domains:
     most_visited_domains = Counter()
     for url in url_counter:
-        domain = url.split("/")[2]  # Extract domain from URL
-        most_visited_domains[domain] += url_counter[url]
-    
+        domain = urlparse(url).netloc  # Extract domain from URL (e.g., "instagram.com")
+        if domain:  # Skip entries that aren't normal http(s) URLs
+            most_visited_domains[domain] += url_counter[url]
+
+
     # Filter out domains with less than 5 visits
     most_visited_domains = {domain: count for domain, count in most_visited_domains.items() if count >= 5}
     most_visited_domains = Counter(most_visited_domains)  # Convert back to Counter to use most_common()
@@ -75,8 +74,7 @@ def run_chrome_history_analysis():
     hours_counter = Counter()
     for time in visit_times:
         # Convert microseconds to timestamp and then to hour
-        hour = datetime.utcfromtimestamp(time / 1_000_000).hour  # Convert to hour (24-hour format)
-        hours_counter[hour] += 1
+        hours_counter[_hour_from_usec(time)] += 1
     
     peak_browsing_hour_overall = hours_counter.most_common(1)[0][0] if hours_counter else None
 
